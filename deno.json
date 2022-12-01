@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "lib": ["deno.ns", "dom"]
+  },
+  "fmt": {
+    "options": {
+      "lineWidth": 120
+    }
+  },
+  "tasks": {
+    "fetch": "curl -fsSL 'https://docs.google.com/spreadsheets/d/e/2PACX-1vRBoeg48bPARq3UWdHuGsaKxN5Q-L4KIJWHDsAu5JnT9mpGQNS6LhmkhbJPgSAQK2fkVjcPhqFywq5p/pub?output=csv' > data.csv && sed -i -e '1,2d' data.csv",
+    "minifyjs": "deno bundle index.ts > dist/index.js && deno run --allow-env --allow-read --allow-run 'npm:esbuild@0.15.17' --bundle --minify --format=esm dist/index.js --outfile=dist/index.min.js && rm dist/index.js",
+    "gen-html": "deno run --check --allow-read --allow-write mod.tsx",
+    "build": "mkdir -p dist && deno task gen-html && cp styles.css dist/styles.css && deno task minifyjs",
+    "clean": "rm -r dist"
+  }
+}

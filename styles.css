@@ -1,0 +1,270 @@
+:root {
+    --font-size: 16px;
+    --text-color: hsl(205deg, 16%, 77%);
+    scroll-padding-top: 50vh;
+}
+
+@media (min-width: 768px) {
+    :root {
+        --font-size: 16px;
+    }
+}
+
+@keyframes target-flash {
+    100% {
+        background-color: rgba(115, 130, 140, 0.5);
+    }
+}
+
+tr:target {
+    animation: target-flash 200ms 4 alternate;
+    box-shadow: inset 4px 0 0 0 var(--primary);
+}
+
+nav {
+    z-index: 99;
+    position: sticky;
+    top: 0;
+    background: var(--background-color);
+    box-shadow: 0 1px 0 rgba(115, 130, 140, 0.2);
+}
+
+nav .title {
+    color: var(--h1-color);
+    font-size: 2rem;
+    font-weight: bold;
+    white-space: nowrap;
+    overflow: hidden;
+    max-width: 60vw;
+    text-overflow: ellipsis;
+}
+
+@media screen and (max-width: 992px) {
+    nav .title.smaller {
+        font-size: 1.2rem;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    #level-select {
+        width: 0;
+        background-position: center center;
+    }
+}
+
+h2 {
+    --typography-spacing-vertical: 1rem;
+}
+
+th {
+    font-weight: bold;
+}
+
+caption {
+    font-weight: bold;
+}
+
+.resource {
+    display: block;
+}
+
+a.resource {
+    color: var(--text-color);
+}
+
+a.resource.missing {
+    color: red;
+}
+
+a.resource.available {
+    color: green;
+}
+
+@media screen and (max-width: 576px) {
+    .resource {
+        font-size: 87.5%;
+    }
+}
+
+.cards {
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+}
+
+.card {
+    background-color: var(--card-background-color);
+    border-radius: var(--border-radius);
+    box-shadow: var(--card-box-shadow);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+}
+
+.cards > .card {
+    padding: 1rem 1rem;
+    margin: .4rem;
+    flex: 1 1 26%;
+    min-width: 150px;
+}
+
+.cards > a.card {
+    color: var(--text-color);
+    text-decoration: none;
+}
+
+.cards > .card > .heading {
+    font-size: 2rem;
+    font-weight: bolder;
+}
+
+.cards > .card > small {
+    font-size: .75rem;
+}
+
+.cards > .card > .subheading {
+    font-size: .875rem;
+}
+
+.powers {
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: start;
+}
+
+.powers > .card {
+    padding: .5rem .5rem;
+    margin: .4rem;
+    flex: 0 calc(25% - .8rem);
+}
+
+@media (min-width: 576px) {
+    .powers {
+        justify-content: center;
+    }
+
+    .powers > .card {
+        flex: 0 0 calc(12.5% - .8rem);
+    }
+}
+
+.powers > .card > .name {
+    font-size: .875rem;
+}
+
+.powers > .card > .quantity {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.cache-tables {
+    display: flex;
+    column-gap: 1rem;
+    flex-direction: column;
+}
+
+@media (min-width: 992px) {
+    .cache-tables {
+        margin-left: 1rem;
+        margin-right: 1rem;
+        flex-direction: row;
+    }
+}
+
+.market-resources {
+    margin-bottom: 0;
+}
+
+.market-resource {
+    font-size: 0.875rem;
+}
+
+@media (min-width: 768px) {
+    .market-resources {
+        display: flex;
+        flex-direction: row;
+        margin-block-start: 0;
+    }
+
+    .market-resource {
+        display: block;
+        flex: 1;
+        margin-bottom: 0;
+    }
+}
+
+#tech-recipes.ms {
+    font-size: smaller;
+}
+
+#tech-recipes:not(.ms) {
+    font-size: small;
+}
+
+#tech-recipes.ms tr:nth-child(n+2) > td:nth-child(1) > *,
+#tech-recipes.ms tr:nth-child(n+4) > td:nth-child(5) > *,
+#tech-recipes.ms tr:nth-child(n+8) {
+    visibility: collapse;
+}
+
+#tech-recipes.ms tr > td:nth-child(n+2):nth-child(-n+4),
+#tech-recipes.ms tr > td:nth-child(n+9):nth-child(-n+10) {
+    display: none;
+}
+
+#dig-sites td:nth-child(n+4):nth-child(-n+8),
+#dig-sites th:nth-child(n+4):nth-child(-n+8),
+#dig-sites tr:nth-child(2) > th {
+    width: 2rem;
+    text-align: center;
+}
+
+#dig-sites .epic {
+    color: #ff3399;
+    font-weight: bold;
+}
+
+#dig-sites .rare {
+    color: #2374b5;
+    font-weight: bold;
+}
+
+#dig-sites .uncommon {
+    color: #538135;
+    font-weight: bold;
+}
+
+#dig-sites .common {
+    color: white;
+    font-weight: bold;
+}
+
+#dig-sites .poor {
+    color: #7e8c8d;
+    font-weight: bold;
+}
+
+[data-tooltip][data-placement=top]::before,
+[data-tooltip][data-placement=bottom]::before,
+[data-tooltip][data-placement=left]::before,
+[data-tooltip][data-placement=right]::before {
+    width: max-content;
+    white-space: pre-line;
+}
+
+[data-tooltip]:not(:hover)::before,
+[data-tooltip]:not(:hover)::after {
+    width: 0;
+    height: 0;
+}
+
+figure {
+    overflow-x: auto;
+    overflow-y: hidden;
+}
