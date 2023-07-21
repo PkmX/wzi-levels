@@ -277,66 +277,66 @@ const baseAP: Record<number, number> = {
 };
 
 const maps: Record<number, string | undefined> = {
-  1: "https://i.imgur.com/ohZpUCT.png",
-  2: "https://i.imgur.com/xOVwWym.png",
-  3: "https://i.imgur.com/VXrYzeM.png",
-  4: "https://i.imgur.com/38eGVi1.png",
-  5: "https://i.imgur.com/tXpQozr.png",
-  10005: "https://i.imgur.com/R7OmwYM.png",
-  6: "https://i.imgur.com/dBDElUF.png",
-  7: "https://i.imgur.com/lp14MIx.png",
-  8: "https://i.imgur.com/mirIN2t.png",
-  10008: "https://i.imgur.com/vhjv6vy.png",
-  9: "https://i.imgur.com/ayzXFKV.png",
-  10: "https://i.imgur.com/CgBybcz.png",
-  10010: "https://i.imgur.com/YFTINfX.png",
-  11: "https://i.imgur.com/voOGPnD.png",
-  12: "https://i.imgur.com/EnXbQYV.png",
-  10012: "https://i.imgur.com/nYgWI2c.png",
-  13: "https://i.imgur.com/g5D9QtX.png",
-  14: "https://i.imgur.com/Z5KdVqm.png",
-  15: "https://i.imgur.com/5SIyFTu.png",
-  10015: "https://i.imgur.com/NtqWTuJ.png",
-  16: "https://i.imgur.com/UeRY54M.png",
-  17: "https://i.imgur.com/dcJ3DkO.png",
-  18: "https://i.imgur.com/3crKVSn.png",
-  19: "https://i.imgur.com/fwAbRp0.png",
-  20: "https://i.imgur.com/MNsVKnN.png",
-  10020: "https://i.imgur.com/DG5TLCV.png",
-  21: "https://i.imgur.com/0SfdLfs.png",
-  22: "https://i.imgur.com/DEDGS8K.png",
-  10022: "https://i.imgur.com/xtxa42k.png",
-  23: "https://i.imgur.com/KRtcCNE.png",
-  24: "https://i.imgur.com/Jvp4j7p.png",
-  25: "https://i.imgur.com/YQ2QsC3.png",
-  10025: "https://i.imgur.com/woKAu8R.png",
-  26: "https://i.imgur.com/tNsI7kk.png",
-  27: "https://i.imgur.com/8JKjjOt.png",
-  28: "https://i.imgur.com/ECH0i4T.png",
-  10028: "https://i.imgur.com/fhv8eUj.png",
-  29: "https://i.imgur.com/U7e0ljO.png",
-  30: "https://i.imgur.com/dzeArrC.png",
-  10030: "https://i.imgur.com/zcMhmX3.jpeg",
-  31: "https://i.imgur.com/VJ2rznd.png",
-  32: "https://i.imgur.com/tHYBCyY.jpeg",
-  10032: "https://i.imgur.com/aXHHJDg.png",
-  20033: "https://i.imgur.com/IQgBN47.png",
-  20034: "https://i.imgur.com/Vrlwdg0.png",
-  20035: "https://i.imgur.com/nCO65QT.png",
-  20036: "https://i.imgur.com/0t0Ow0p.png",
-  20037: "https://i.imgur.com/9rB54v2.png",
-  20038: "https://i.imgur.com/1qNTd94.png",
-  20039: "https://i.imgur.com/tflSVDO.png",
-  20040: "https://i.imgur.com/xu3pSDe.png",
-  20041: "https://i.imgur.com/QCpcDGD.png",
-  20042: "https://i.imgur.com/XT8lhbq.png",
-  20043: "https://i.imgur.com/7L8OBHG.png",
-  20044: "https://i.imgur.com/DAsKHXW.png",
-  20045: "https://i.imgur.com/uenXbES.png",
-  20046: "https://i.imgur.com/AAV7j8E.png",
-  20047: "https://i.imgur.com/oCOmKtP.png",
-  20048: undefined,
-  20049: "https://i.imgur.com/Xxayz46.png",
+  1: "https://i.imgur.com/ohZpUCT.png", // TODO: fogged
+  2: "https://i.imgur.com/UvC6a8I.png",
+  3: "https://i.imgur.com/UKXVpBE.png",
+  4: "https://i.imgur.com/w4NkjZE.png",
+  5: "https://i.imgur.com/KHyizW7.png",
+  10005: "https://i.imgur.com/YJZtguP.png",
+  6: "https://i.imgur.com/lTZTknj.png",
+  7: "https://i.imgur.com/4gxq1U4.png",
+  8: "https://i.imgur.com/fsRW55h.png",
+  10008: "https://i.imgur.com/pNZo05Q.png",
+  9: "https://i.imgur.com/PWBZp31.png",
+  10: "https://i.imgur.com/upnjf3E.png", // TODO: low resolution
+  10010: "https://i.imgur.com/JUnbTyJ.png",
+  11: "https://i.imgur.com/UnzsX8w.png",
+  12: "https://i.imgur.com/EnXbQYV.png", // TODO: fogged
+  10012: "https://i.gyazo.com/f7311d0a2492c13a3de070543042c412.png",
+  13: "https://i.imgur.com/g5D9QtX.png", // TODO: fogged
+  14: "https://i.imgur.com/Z5KdVqm.png", // TODO: fogged
+  15: "https://i.imgur.com/iLsR4we.png",
+  10015: "https://i.imgur.com/6EFPXDM.png",
+  16: "https://i.imgur.com/gQtWEWL.jpeg",
+  17: "https://i.imgur.com/dcJ3DkO.png", // TODO: fogged
+  18: "https://i.imgur.com/3crKVSn.png", // TODO: fogged
+  19: "https://i.imgur.com/G6XnqqS.png",
+  20: "https://i.imgur.com/bw1MgCO.png",
+  10020: "https://i.imgur.com/bpwzxlD.png",
+  21: "https://i.imgur.com/btnQV6E.png",
+  22: "https://i.imgur.com/8bueeXd.png",
+  10022: "https://i.ibb.co/KNnjFcX/22b-Scandinavia-Hard.png",
+  23: "https://i.imgur.com/Joofzp5.png",
+  24: "https://i.imgur.com/ACtMiYb.png",
+  25: "https://i.imgur.com/I2sDd3a.png",
+  10025: "https://i.ibb.co/CJYG3Fx/25a-Hardened-Rise-and-Fall-of-the-Roman-Empire-HD.png",
+  26: "https://i.imgur.com/lhdEb7M.png",
+  27: "https://i.imgur.com/Oc1Ejc7.png",
+  28: "https://i.imgur.com/4AiqDjD.png",
+  10028: "https://i.imgur.com/fhv8eUj.png", // TODO: fogged
+  29: "https://i.imgur.com/U7e0ljO.png", // TODO: fogged
+  30: "https://i.imgur.com/dzeArrC.png", // TODO: fogged
+  10030: "https://i.imgur.com/zcMhmX3.png", // TODO: fogged
+  31: "https://i.imgur.com/VJ2rznd.png", // TODO: fogged
+  32: "https://i.imgur.com/tHYBCyY.png", // TODO: fogged
+  10032: "https://i.imgur.com/aXHHJDg.png", // TODO: fogged
+  20033: "https://i.gyazo.com/ee005fdd061f928f36b56cfa926b0d37.png",
+  20034: "https://i.imgur.com/Vrlwdg0.png", // TODO: fogged
+  20035: "https://i.imgur.com/nCO65QT.png", // TODO: fogged
+  20036: "https://i.imgur.com/0t0Ow0p.png", // TODO: fogged
+  20037: "https://i.imgur.com/9rB54v2.png", // TODO: fogged
+  20038: "https://i.imgur.com/1qNTd94.png", // TODO: fogged
+  20039: "https://i.imgur.com/tflSVDO.png", // TODO: fogged
+  20040: "https://i.imgur.com/xu3pSDe.png", // TODO: fogged
+  20041: "https://i.imgur.com/QCpcDGD.png", // TODO: fogged
+  20042: "https://i.imgur.com/XT8lhbq.png", // TODO: fogged
+  20043: "https://i.imgur.com/7L8OBHG.png", // TODO: fogged
+  20044: "https://i.imgur.com/DAsKHXW.png", // TODO: fogged
+  20045: "https://i.imgur.com/uenXbES.png", // TODO: fogged
+  20046: "https://i.imgur.com/AAV7j8E.png", // TODO: fogged
+  20047: "https://i.imgur.com/oCOmKtP.png", // TODO: fogged
+  20048: undefined, // TODO: no map
+  20049: "https://i.imgur.com/6RLnaTb.png",
 };
 
 const levels: Map<number, Level> = new Map();
@@ -962,7 +962,8 @@ function renderPage(title: string, header: JSX.Element, content: JSX.Element) {
           <small>
             Made by <u data-tooltip="PkmX#6818">PkmX</u> · Level data by <u data-tooltip="FiveSmith#2635">FiveSmith</u>
             {" "}
-            · Map screenshots by <u data-tooltip="Maak#3906">Muli</u>
+            · Map screenshots by <u data-tooltip="Maak#3906">Muli</u> and forum{" "}
+            <a href="https://www.warzone.com/Forum/677028-superfog-screenshots">thread</a>
           </small>
           <small>
             <a href="https://github.com/PkmX/wzi-levels">GitHub</a>
