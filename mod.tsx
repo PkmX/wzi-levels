@@ -561,6 +561,25 @@ function renderHospitals(hospitals: Readonly<Hospital>[]) {
 
   const maxLevel = hospitals.reduce((acc, h) => Math.max(acc, h.maxLevel), 1);
 
+  const totals = hospitals.length <= 1 ? undefined : (
+    <tfoot>
+      <tr>
+        <td>Total</td>
+        {[...Array(maxLevel).keys()].map((i) => {
+          const armies = hospitals.reduce((acc, h) => acc + h.armySavedAtLevel(Math.min(i + 1, h.maxLevel)), 0);
+          const cost = hospitals.reduce((acc, h) => acc + h.upgradeCosts.slice(0, i).reduce((a, b) => a + b, 0), 0);
+          return (
+            <td>
+              {renderNumber(armies)}
+              <br />
+              <small>(${renderNumber(cost)})</small>
+            </td>
+          );
+        })}
+      </tr>
+    </tfoot>
+  );
+
   return (
     <figure>
       <table role="grid">
@@ -592,6 +611,7 @@ function renderHospitals(hospitals: Readonly<Hospital>[]) {
             </tr>
           ))}
         </tbody>
+        {totals}
       </table>
     </figure>
   );
