@@ -3,9 +3,7 @@
     "lib": ["deno.ns", "dom"]
   },
   "fmt": {
-    "options": {
-      "lineWidth": 120
-    }
+    "lineWidth": 120
   },
   "tasks": {
     "fetch": "curl -fsSL 'https://docs.google.com/spreadsheets/d/e/2PACX-1vRBoeg48bPARq3UWdHuGsaKxN5Q-L4KIJWHDsAu5JnT9mpGQNS6LhmkhbJPgSAQK2fkVjcPhqFywq5p/pub?output=csv' > data.csv && sed -i -e '1,2d' data.csv",
