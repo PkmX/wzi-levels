@@ -294,7 +294,7 @@ const maps: Record<number, string | undefined> = {
   12: "https://i.imgur.com/EnXbQYV.png", // TODO: fogged
   10012: "https://i.gyazo.com/f7311d0a2492c13a3de070543042c412.png",
   13: "https://i.imgur.com/g5D9QtX.png", // TODO: fogged
-  14: "https://i.imgur.com/Z5KdVqm.png", // TODO: fogged
+  14: "https://i.imgur.com/T2XCtup.png",
   15: "https://i.imgur.com/iLsR4we.png",
   10015: "https://i.imgur.com/6EFPXDM.png",
   16: "https://i.imgur.com/gQtWEWL.jpeg",
