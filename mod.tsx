@@ -109,7 +109,7 @@ function parseHospital(row: CSVObject): Hospital {
   const details = row["Details"];
   const matches = details.match(/^Base armies saved: (.+?); Upgrade costs: ?(.*?)$/);
   if (!matches) {
-    throw `Invalid hosptial: ${details}`;
+    throw `Invalid hospital: ${details}`;
   }
 
   return new Hospital(
