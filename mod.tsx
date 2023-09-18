@@ -288,18 +288,18 @@ const maps: Record<number, string | undefined> = {
   8: "https://i.imgur.com/fsRW55h.png",
   10008: "https://i.imgur.com/pNZo05Q.png",
   9: "https://i.imgur.com/PWBZp31.png",
-  10: "https://i.imgur.com/upnjf3E.png", // TODO: low resolution
+  10: "https://i.imgur.com/upnjf3E.png", // Siege of Feldmere: low resolution
   10010: "https://i.imgur.com/JUnbTyJ.png",
   11: "https://i.imgur.com/UnzsX8w.png",
-  12: "https://i.imgur.com/EnXbQYV.png", // TODO: fogged
+  12: "https://i.imgur.com/fpIOx85.png",
   10012: "https://i.gyazo.com/f7311d0a2492c13a3de070543042c412.png",
-  13: "https://i.imgur.com/g5D9QtX.png", // TODO: fogged
+  13: "https://i.imgur.com/QGCmnl2.png",
   14: "https://i.imgur.com/T2XCtup.png",
   15: "https://i.imgur.com/iLsR4we.png",
   10015: "https://i.imgur.com/6EFPXDM.png",
   16: "https://i.imgur.com/gQtWEWL.jpeg",
-  17: "https://i.imgur.com/dcJ3DkO.png", // TODO: fogged
-  18: "https://i.imgur.com/3crKVSn.png", // TODO: fogged
+  17: "https://i.imgur.com/AhwLFuH.png",
+  18: "https://i.imgur.com/rCByu6m.png", // Europe 1066 AD: low resolution
   19: "https://i.imgur.com/G6XnqqS.png",
   20: "https://i.imgur.com/bw1MgCO.png",
   10020: "https://i.imgur.com/bpwzxlD.png",
@@ -313,7 +313,7 @@ const maps: Record<number, string | undefined> = {
   26: "https://i.imgur.com/lhdEb7M.png",
   27: "https://i.imgur.com/Oc1Ejc7.png",
   28: "https://i.imgur.com/4AiqDjD.png",
-  10028: "https://i.imgur.com/fhv8eUj.png", // TODO: fogged
+  10028: "https://i.imgur.com/0rDZLeg.png",
   29: "https://i.imgur.com/5XXLo83.png",
   30: "https://i.imgur.com/dzeArrC.png", // TODO: fogged
   10030: "https://i.imgur.com/zcMhmX3.png", // TODO: fogged
@@ -326,7 +326,7 @@ const maps: Record<number, string | undefined> = {
   20036: "https://i.imgur.com/0t0Ow0p.png", // TODO: fogged
   20037: "https://i.imgur.com/9rB54v2.png", // TODO: fogged
   20038: "https://i.imgur.com/1qNTd94.png", // TODO: fogged
-  20039: "https://i.imgur.com/tflSVDO.png", // TODO: fogged
+  20039: "https://i.imgur.com/AyDlhxN.png",
   20040: "https://i.imgur.com/xu3pSDe.png", // TODO: fogged
   20041: "https://i.imgur.com/QCpcDGD.png", // TODO: fogged
   20042: "https://i.imgur.com/XT8lhbq.png", // TODO: fogged
