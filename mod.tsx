@@ -444,15 +444,21 @@ function renderNumber(n: number): string {
   return String(n);
 }
 
-function renderLevelSelect(myid: number) {
-  const renderOption = (id: number, level: Level) =>
-    id == myid
-      ? <option value={`./${toPageName(level.name)}.html`} selected="">{level.name}</option>
-      : <option value={`./${toPageName(level.name)}.html`}>{level.name}</option>;
+type Page = Level | "index" | "powers" | "dig-sites";
+
+function renderPageSelect(self: Page) {
+  const renderOption = (value: string, name: string, selected: boolean) =>
+    selected
+      ? <option value={value} selected="">{name}</option>
+      : <option value={value}>{name}</option>;
 
   return (
     <select id="level-select" onchange="window.location.href=this.value">
-      {[...levels.entries()].map(([id, level]) => renderOption(id, level))}
+      {renderOption("./index.html", "Index", self == "index")}
+      {renderOption("./powers.html", "Powers", self == "powers")}
+      {renderOption("./dig-sites.html", "Dig Sites", self == "dig-sites")}
+      <option disabled>──────────────────────────────</option>
+      {[...levels.entries()].map(([id, level]) => renderOption(`./${toPageName(level.name)}.html`, level.name, self == level))}
     </select>
   );
 }
@@ -999,12 +1005,17 @@ function renderLevelHtml(id: number, level: Level) {
     <Fragment>
       <ul>
         <li>
-          <a class={"title" + (level.name.length > 15 ? " smaller" : "")} href="./index.html">{level.name}</a>
+          {renderPageSelect(level)}
         </li>
       </ul>
       <ul>
         <li>
-          {renderLevelSelect(id)}
+          <span class={"title" + (level.name.length > 15 ? " smaller" : "")} href="./index.html">{level.name}</span>
+        </li>
+      </ul>
+      <ul>
+        <li>
+          <a class="github-icon" href="https://github.com/PkmX/wzi-levels" target="_blank"></a>
         </li>
       </ul>
     </Fragment>
@@ -1120,7 +1131,17 @@ function renderIndexHtml() {
     <Fragment>
       <ul>
         <li>
-          <h1 style="margin-bottom: 0;">Warzone Idle Level Data</h1>
+          {renderPageSelect("index")}
+        </li>
+      </ul>
+      <ul>
+        <li>
+          <span class="title">Warzone Idle Level Data</span>
+        </li>
+      </ul>
+      <ul>
+        <li>
+          <a class="github-icon" href="https://github.com/PkmX/wzi-levels" target="_blank"></a>
         </li>
       </ul>
     </Fragment>
