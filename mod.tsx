@@ -316,26 +316,26 @@ const maps: Record<number, string | undefined> = {
   10028: "https://i.imgur.com/0rDZLeg.png",
   29: "https://i.imgur.com/5XXLo83.png",
   30: "https://i.imgur.com/dzeArrC.png", // TODO: fogged
-  10030: "https://i.imgur.com/zcMhmX3.png", // TODO: fogged
+  10030: "https://i.postimg.cc/TfSjMZqR/Idle-Warzone-Hardened-Triskelion.png", // Hardened Triskelion: low resolution
   31: "https://i.imgur.com/VJ2rznd.png", // TODO: fogged
-  32: "https://i.imgur.com/tHYBCyY.png", // TODO: fogged
+  32: "https://i.imgur.com/3cpvaXa.png",
   10032: "https://i.imgur.com/aXHHJDg.png", // TODO: fogged
   20033: "https://i.gyazo.com/ee005fdd061f928f36b56cfa926b0d37.png",
-  20034: "https://i.imgur.com/Vrlwdg0.png", // TODO: fogged
-  20035: "https://i.imgur.com/nCO65QT.png", // TODO: fogged
-  20036: "https://i.imgur.com/0t0Ow0p.png", // TODO: fogged
-  20037: "https://i.imgur.com/9rB54v2.png", // TODO: fogged
-  20038: "https://i.imgur.com/1qNTd94.png", // TODO: fogged
-  20039: "https://i.imgur.com/AyDlhxN.png",
-  20040: "https://i.imgur.com/xu3pSDe.png", // TODO: fogged
-  20041: "https://i.imgur.com/QCpcDGD.png", // TODO: fogged
-  20042: "https://i.imgur.com/XT8lhbq.png", // TODO: fogged
-  20043: "https://i.imgur.com/7L8OBHG.png", // TODO: fogged
-  20044: "https://i.imgur.com/DAsKHXW.png", // TODO: fogged
-  20045: "https://i.imgur.com/uenXbES.png", // TODO: fogged
-  20046: "https://i.imgur.com/AAV7j8E.png", // TODO: fogged
+  20034: "https://i.gyazo.com/74ae0c8f2710a24c45411581b74e9e82.png",
+  20035: "https://i.gyazo.com/46618bdd5be4de73f59a473f9fadaf89.png",
+  20036: "https://i.gyazo.com/e65f29b52c909606353ef6d23708f0ba.png",
+  20037: "https://i.gyazo.com/6d8a8e629caa25091b11b12a5613aa46.png",
+  20038: "https://i.imgur.com/GM3dQye.png",
+  20039: "https://i.gyazo.com/e66c7bffa625124a7849e28f5755abda.png",
+  20040: "https://i.gyazo.com/0eb66640f9c56e0ad38dc2ce1c186180.png",
+  20041: "https://i.gyazo.com/9ad3d6cc8820274b4a5473d5715edbd3.png",
+  20042: "https://i.gyazo.com/ecea8c43701f1ca9891d6c46f88055d2.png",
+  20043: "https://i.gyazo.com/1d67fe47a90858ac84c05965d72e5eb2.png",
+  20044: "https://i.gyazo.com/ecfede94e4c3059e5b9c7594ee75157a.png",
+  20045: "https://i.gyazo.com/ce053ea613098dec4e32c48de0d091cd.png",
+  20046: "https://i.gyazo.com/ce1ca5f7867abb9c391f01d4c5f309c5.png",
   20047: "https://i.imgur.com/oCOmKtP.png", // TODO: fogged
-  20048: undefined, // TODO: no map
+  20048: "https://i.imgur.com/Kwks7CR.png",
   20049: "https://i.imgur.com/6RLnaTb.png",
 };
 
