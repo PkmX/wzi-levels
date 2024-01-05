@@ -851,6 +851,13 @@ function renderMercenaryCamps(mcs: MercenaryCamp[], totalMerc: number, totalCost
   );
 }
 
+function digSitesToCommonEquivalent(digSites: Readonly<DigSite[]>): number {
+  return digSites.reduce(
+    (acc, { rewards: r }) => acc + (r.epic * 125 + r.rare * 25 + r.uncommon * 5 + r.common + r.poor / 5),
+    0,
+  ) / 100;
+}
+
 function renderDigSites(digSites: DigSite[]) {
   if (digSites.length == 0) {
     return undefined;
@@ -866,15 +873,6 @@ function renderDigSites(digSites: DigSite[]) {
     const f = (n: number, u: string) => n != 0 ? `${n}${u}` : "";
     return [f(d, "d"), f(h, "h"), f(m, "m"), f(t, "s")].join(" ");
   };
-
-  const toCommonEquivalent = (
-    r: DigSite["rewards"],
-  ) => (r.epic * 125 + r.rare * 25 + r.uncommon * 5 + r.common + r.poor / 5);
-
-  const totalRewards = digSites.reduce(
-    (acc, { rewards }) => acc + toCommonEquivalent(rewards),
-    0,
-  ) / 100;
 
   return (
     <figure>
@@ -913,7 +911,7 @@ function renderDigSites(digSites: DigSite[]) {
             <td>Total</td>
             <td>{renderNumber(digSites.reduce((acc, d) => acc + d.cost, 0))}</td>
             <td>{renderTime(digSites.reduce((acc, d) => acc + d.time, 0))}</td>
-            <td colspan="5">{totalRewards.toFixed(2)} Commons</td>
+            <td colspan="5">{digSitesToCommonEquivalent(digSites).toFixed(2)} Commons</td>
           </tr>
         </tfoot>
       </table>
@@ -1126,6 +1124,153 @@ function renderLevelHtml(id: number, level: Level) {
   return renderPage(`${level.name}: Warzone Idle Level Stats`, header, content);
 }
 
+function renderPowersHtml() {
+  const header = (
+    <Fragment>
+      <ul>
+        <li>
+          {renderPageSelect("powers")}
+        </li>
+      </ul>
+      <ul>
+        <li>
+          <span class="title">List of Powers</span>
+        </li>
+      </ul>
+      <ul>
+        <li>
+          <a class="github-icon" href="https://github.com/PkmX/wzi-levels" target="_blank"></a>
+        </li>
+      </ul>
+    </Fragment>
+  );
+
+  const sum = (arr: number[]) => arr.reduce((acc, i) => acc + i, 0);
+
+  const content = (
+    <Fragment>
+      <table role="grid">
+        <thead>
+          <tr>
+            <td>Level</td>
+            <td>TW</td>
+            <td>SAC</td>
+            <td>SM</td>
+            <td>FC</td>
+            <td>MR</td>
+            <td>FB</td>
+            <td>IM</td>
+            <td>SL</td>
+            <td>ML</td>
+          </tr>
+        </thead>
+        <tbody>
+          {[...levels.values()].map(({ name, powers }) => (
+            <tr>
+              <td>
+                <a href={`./${toPageName(name)}.html`}>{name}</a>
+              </td>
+              <td>{powers.timeWrap}</td>
+              <td>{powers.superchargeArmyCamp}</td>
+              <td>{powers.superchargeMine}</td>
+              <td>{powers.freeCache}</td>
+              <td>{powers.marketRaid}</td>
+              <td>{powers.fogBuster}</td>
+              <td>{powers.inspireMercenaries}</td>
+              <td>{powers.skipLevel}</td>
+              <td>{powers.multiLevel}</td>
+            </tr>
+          ))}
+        </tbody>
+        <tfoot>
+          <tr>
+            <td>Total</td>
+            <td>{sum([...levels.values()].map((l) => l.powers.timeWrap))}</td>
+            <td>{sum([...levels.values()].map((l) => l.powers.superchargeArmyCamp))}</td>
+            <td>{sum([...levels.values()].map((l) => l.powers.superchargeMine))}</td>
+            <td>{sum([...levels.values()].map((l) => l.powers.freeCache))}</td>
+            <td>{sum([...levels.values()].map((l) => l.powers.marketRaid))}</td>
+            <td>{sum([...levels.values()].map((l) => l.powers.fogBuster))}</td>
+            <td>{sum([...levels.values()].map((l) => l.powers.inspireMercenaries))}</td>
+            <td>{sum([...levels.values()].map((l) => l.powers.skipLevel))}</td>
+            <td>{sum([...levels.values()].map((l) => l.powers.multiLevel))}</td>
+          </tr>
+        </tfoot>
+      </table>
+    </Fragment>
+  );
+
+  return renderPage("Warzone Idle Power Statistics", header, content);
+}
+
+function renderDigSitesHtml() {
+  const header = (
+    <Fragment>
+      <ul>
+        <li>
+          {renderPageSelect("dig-sites")}
+        </li>
+      </ul>
+      <ul>
+        <li>
+          <span class="title">List of Dig Sites</span>
+        </li>
+      </ul>
+      <ul>
+        <li>
+          <a class="github-icon" href="https://github.com/PkmX/wzi-levels" target="_blank"></a>
+        </li>
+      </ul>
+    </Fragment>
+  );
+
+  const countDigSitesOf = (digSites: Readonly<DigSite[]>, cond: (reward: DigSite["rewards"]) => boolean) =>
+    digSites.reduce((acc, { rewards }) => acc + (cond(rewards) ? 1 : 0), 0);
+
+  const content = (
+    <Fragment>
+      <table role="grid">
+        <thead>
+          <tr>
+            <td>Level</td>
+            <td>Dig Sites</td>
+            <td>Equiv. Commons</td>
+            <td>100% C</td>
+            <td>≧30% U</td>
+            <td>≧80% U</td>
+            <td>≧85% U</td>
+            <td>≧88% U</td>
+            <td>PCUR</td>
+            <td>≧1% Epic</td>
+            <td>≧3% Epic</td>
+          </tr>
+        </thead>
+        <tbody>
+          {[...levels.values()].map((level) => (
+            <tr>
+              <td>
+                <a href={`./${toPageName(level.name)}.html`}>{level.name}</a>
+              </td>
+              <td>{level.digSites.length}</td>
+              <td>{digSitesToCommonEquivalent(level.digSites).toFixed(2)}</td>
+              <td>{countDigSitesOf(level.digSites, (r) => r.common == 100)}</td>
+              <td>{countDigSitesOf(level.digSites, (r) => r.uncommon >= 30)}</td>
+              <td>{countDigSitesOf(level.digSites, (r) => r.uncommon >= 80)}</td>
+              <td>{countDigSitesOf(level.digSites, (r) => r.uncommon >= 85)}</td>
+              <td>{countDigSitesOf(level.digSites, (r) => r.uncommon >= 88)}</td>
+              <td>{countDigSitesOf(level.digSites, (r) => r.rare > 0)}</td>
+              <td>{countDigSitesOf(level.digSites, (r) => r.epic >= 1)}</td>
+              <td>{countDigSitesOf(level.digSites, (r) => r.epic >= 3)}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </Fragment>
+  );
+
+  return renderPage("Warzone Idle Dig Sites Statistics", header, content);
+}
+
 function renderIndexHtml() {
   const header = (
     <Fragment>
@@ -1206,4 +1351,6 @@ for (const [id, level] of levels.entries()) {
   );
 }
 
+await writeToFile("./dist/powers.html", "<!doctype html>" + await renderToString(renderPowersHtml()));
+await writeToFile("./dist/dig-sites.html", "<!doctype html>" + await renderToString(renderDigSitesHtml()));
 await writeToFile(`./dist/index.html`, `<!doctype html>` + await renderToString(renderIndexHtml()));
