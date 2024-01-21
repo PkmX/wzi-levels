@@ -299,7 +299,7 @@ const maps: Record<number, string | undefined> = {
   10015: "https://i.imgur.com/6EFPXDM.png",
   16: "https://i.imgur.com/gQtWEWL.jpeg",
   17: "https://i.imgur.com/AhwLFuH.png",
-  18: "https://i.imgur.com/rCByu6m.png", // Europe 1066 AD: low resolution
+  18: "https://i.imgur.com/9D6862k.png",
   19: "https://i.imgur.com/G6XnqqS.png",
   20: "https://i.imgur.com/bw1MgCO.png",
   10020: "https://i.imgur.com/bpwzxlD.png",
@@ -334,7 +334,7 @@ const maps: Record<number, string | undefined> = {
   20044: "https://i.gyazo.com/ecfede94e4c3059e5b9c7594ee75157a.png",
   20045: "https://i.gyazo.com/ce053ea613098dec4e32c48de0d091cd.png",
   20046: "https://i.gyazo.com/ce1ca5f7867abb9c391f01d4c5f309c5.png",
-  20047: "https://i.imgur.com/oCOmKtP.png", // TODO: fogged
+  20047: "https://i.imgur.com/jH9LJqW.png", // TODO: partially fogged
   20048: "https://i.imgur.com/Kwks7CR.png",
   20049: "https://i.imgur.com/6RLnaTb.png",
 };
