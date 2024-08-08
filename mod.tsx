@@ -315,11 +315,11 @@ const maps: Record<number, string | undefined> = {
   28: "https://i.imgur.com/4AiqDjD.png",
   10028: "https://i.imgur.com/0rDZLeg.png",
   29: "https://i.imgur.com/5XXLo83.png",
-  30: "https://i.imgur.com/dzeArrC.png", // TODO: fogged
+  30: "https://i.gyazo.com/8725ed7edf07d4c6af393fa566de5071.png",
   10030: "https://i.postimg.cc/TfSjMZqR/Idle-Warzone-Hardened-Triskelion.png", // Hardened Triskelion: low resolution
-  31: "https://i.imgur.com/VJ2rznd.png", // TODO: fogged
+  31: "https://i.gyazo.com/004cb5f1859a063dad9e07d5fa4954be.png",
   32: "https://i.imgur.com/3cpvaXa.png",
-  10032: "https://i.imgur.com/aXHHJDg.png", // TODO: fogged
+  10032: "https://i.postimg.cc/fW1svbL1/Hardened-Europe-Huge.png",
   20033: "https://i.gyazo.com/ee005fdd061f928f36b56cfa926b0d37.png",
   20034: "https://i.gyazo.com/74ae0c8f2710a24c45411581b74e9e82.png",
   20035: "https://i.gyazo.com/46618bdd5be4de73f59a473f9fadaf89.png",
