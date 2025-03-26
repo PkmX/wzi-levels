@@ -58,7 +58,7 @@ export class Hospital {
 }
 
 export class Powers {
-  timeWrap = 0;
+  timeWarp = 0;
   superchargeArmyCamp = 0;
   superchargeMine = 0;
   freeCache = 0;

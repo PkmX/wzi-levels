@@ -179,7 +179,7 @@ function parsePowers(s: string): Powers {
     const [name, quantity] = p.split("x");
     switch (name) {
       case "TW":
-        powers.timeWrap = parseInt(quantity);
+        powers.timeWarp = parseInt(quantity);
         break;
       case "SAC":
         powers.superchargeArmyCamp = parseInt(quantity);
@@ -473,7 +473,7 @@ function renderLocation(location: Readonly<Location>, placement: string) {
 
 function renderPowers(powers: Powers) {
   const abbrev = {
-    timeWrap: "TW",
+    timeWarp: "TW",
     superchargeArmyCamp: "SAC",
     superchargeMine: "SM",
     freeCache: "FC",
@@ -485,7 +485,7 @@ function renderPowers(powers: Powers) {
   } as const;
 
   const fullName = {
-    timeWrap: "Time Wrap",
+    timeWarp: "Time Warp",
     superchargeArmyCamp: "Supercharge Army Camp",
     superchargeMine: "Supercharge Mine",
     freeCache: "Free Cache",
@@ -1170,7 +1170,7 @@ function renderPowersHtml() {
               <td>
                 <a href={`./${toPageName(name)}.html`}>{name}</a>
               </td>
-              <td>{powers.timeWrap}</td>
+              <td>{powers.timeWarp}</td>
               <td>{powers.superchargeArmyCamp}</td>
               <td>{powers.superchargeMine}</td>
               <td>{powers.freeCache}</td>
@@ -1185,7 +1185,7 @@ function renderPowersHtml() {
         <tfoot>
           <tr>
             <td>Total</td>
-            <td>{sum([...levels.values()].map((l) => l.powers.timeWrap))}</td>
+            <td>{sum([...levels.values()].map((l) => l.powers.timeWarp))}</td>
             <td>{sum([...levels.values()].map((l) => l.powers.superchargeArmyCamp))}</td>
             <td>{sum([...levels.values()].map((l) => l.powers.superchargeMine))}</td>
             <td>{sum([...levels.values()].map((l) => l.powers.freeCache))}</td>
